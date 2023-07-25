@@ -49,11 +49,7 @@ class _MagicBallScreenState extends State<MagicBallScreen> {
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
       // then parse the JSON.
-      // setState(() async {
-      //   Ball.fromJson(jsonDecode(response.body)).answer;
-      // });
       return Ball.fromJson(jsonDecode(response.body)).answer;
-      //return 'test';
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
@@ -73,8 +69,6 @@ class _MagicBallScreenState extends State<MagicBallScreen> {
               Color.fromRGBO(0, 0, 2, 1)
             ])),
         child: Scaffold(
-          // By defaut, Scaffold background is white
-          // Set its value to transparent
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(16, 12, 44, 1),
